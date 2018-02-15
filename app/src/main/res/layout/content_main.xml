@@ -9,67 +9,11 @@
     tools:context="com.example.apoorvesh.marriagebell.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="0sp"
-        >
-
-       <TextView
-           android:id="@+id/textview_photography"
-           android:layout_width="match_parent"
-           android:layout_height="150sp"
-           android:text="Photography"
-           android:textSize="25sp"
-           android:textColor="@android:color/white"
-           android:gravity="center"
-           android:background="@drawable/photograpy"
-           android:onClick="onclick"
-           />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="150sp"
-            android:text="Photography"
-            android:textSize="25sp"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:background="@drawable/photograpy"
-            android:padding="10sp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="150sp"
-            android:text="Photography"
-            android:textSize="25sp"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:background="@drawable/photograpy"
-            android:padding="10sp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="150sp"
-            android:text="Photography"
-            android:textSize="25sp"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:background="@drawable/photograpy"
-            android:padding="10sp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="150sp"
-            android:text="Photography"
-            android:textSize="25sp"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:background="@drawable/photograpy"
-            android:padding="10sp"/>
-
-
-
-    </LinearLayout>
+        android:layout_height="0sp"
+        app:layout_constraintVertical_weight=".9"
+        android:id="@+id/framelayout"></FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"

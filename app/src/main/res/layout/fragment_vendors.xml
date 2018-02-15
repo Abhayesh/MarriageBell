@@ -1,0 +1,74 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/textView_photography"
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:layout_margin="1sp"
+            android:text="@string/vendor_photography"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:background="@drawable/photograpy"
+            android:onClick="onclick"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:layout_margin="1sp"
+            android:text="@string/vendor_decoration"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:background="@drawable/decoration"
+            android:padding="10sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:layout_margin="1sp"
+            android:text="@string/vendor_catering"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:background="@drawable/catering1"
+            android:padding="10sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:layout_margin="1sp"
+            android:text="@string/vendor_makeup_artists"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:background="@drawable/makeup_artists"
+            android:padding="10sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:layout_margin="1sp"
+            android:text="@string/vendor_invitation_card"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:background="@drawable/invitation_card2"
+            android:padding="10sp"/>
+
+
+
+    </LinearLayout>
+</ScrollView>
+

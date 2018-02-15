@@ -10,11 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class Inspiration extends android.app.Fragment{
+public class Vendors extends android.app.Fragment{
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState){
 
-        View v=inflater.inflate(R.layout.fragment_inspiration,container,false);
+        View v=inflater.inflate(R.layout.fragment_vendors,container,false);
 
         return v;
     }

@@ -1,5 +1,7 @@
 package com.example.apoorvesh.marriagebell;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -20,14 +22,22 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     TextView photography;
+    FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        fragmentManager=getFragmentManager();
+        fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.framelayout,new Vendors());
+        fragmentTransaction.commit();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         BottomNavigationView bottomNavigationView= findViewById(R.id.bottom_navigation);
-                photography= findViewById(R.id.textview_photography);
+                photography= findViewById(R.id.textView_photography);
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -44,13 +54,19 @@ public class MainActivity extends AppCompatActivity
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.bnvendors:
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        fragmentTransaction=fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.framelayout,new Vendors());
+                        fragmentTransaction.commit();
                         break;
                     case R.id.bnvenues:
-                        startActivity(new Intent(getApplicationContext(),Venues.class));
+                        fragmentTransaction=fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.framelayout,new Venues());
+                        fragmentTransaction.commit();
                         break;
                     case R.id.bninspiration:
-                        startActivity(new Intent(getApplicationContext(),Inspiration.class));
+                        fragmentTransaction=fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.framelayout,new Inspiration());
+                        fragmentTransaction.commit();
                 }
                 return true;
             }
@@ -60,7 +76,7 @@ public class MainActivity extends AppCompatActivity
     }
         public void onclick(View v){
         switch (v.getId()){
-            case R.id.textview_photography:
+            case R.id.textView_photography:
                 startActivity(new Intent(MainActivity.this,Photography.class));
 
         }
@@ -104,11 +120,11 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_vendors) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_venues) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_inspiration) {
 
         } else if (id == R.id.nav_manage) {
 
